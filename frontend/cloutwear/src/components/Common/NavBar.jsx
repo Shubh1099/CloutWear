@@ -38,28 +38,28 @@ const NavBar = () => {
           </Link>
         </div>
         <div className="hidden md:block">
-          <div className="flex space-x-6">
+          <div className="flex space-x-6 text-gray-600">
             <Link
               to="#"
-              className=" hover:!text-black  text-sm font-medium uppercase transition-colors "
+              className=" hover:text-black  text-sm font-medium uppercase transition-colors "
             >
               Men
             </Link>
             <Link
               to="#"
-              className="text-sm font-medium uppercase text-gray-600  hover:!text-black transition-colors"
+              className="text-sm font-medium uppercase  hover:text-black transition-colors"
             >
               Women
             </Link>
             <Link
               to="#"
-              className="text-sm font-medium uppercase hover:!text-black transition-colors"
+              className="text-sm font-medium uppercase hover:text-black transition-colors"
             >
               Top Wear
             </Link>
             <Link
               to="#"
-              className="text-sm font-medium uppercase hover:!text-black transition-colors"
+              className="text-sm font-medium uppercase hover:text-black transition-colors"
             >
               Bottom Wear
             </Link>
