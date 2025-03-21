@@ -40,7 +40,7 @@ const NavBar = () => {
         <div className="hidden md:block">
           <div className="flex space-x-6 text-gray-600">
             <Link
-              to="#"
+              to="/collections/all"
               className=" hover:text-black  text-sm font-medium uppercase transition-colors "
             >
               Men
@@ -102,7 +102,7 @@ const NavBar = () => {
           <h2 className="text-xl font-semibold mb-4">Menu</h2>
           <nav className="space-y-4 ">
             <Link
-              to="#"
+              to="collections/all"
               onClick={toggleNavDrawer}
               className="block text-gray-600 hover:text-black transition-colors"
             >

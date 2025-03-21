@@ -6,21 +6,16 @@ import { Outlet } from "react-router-dom";
 const UserLayout = () => {
   return (
     <div>
-      {/* Header */}
       <Header />
-      {/* Main */}
       <main>
-        <Outlet/>
+        <Outlet />
       </main>
-      
-      {/* Footer */}
       <Footer />
     </div>
   );
 };
 
 export default UserLayout;
-
 
 //  <div className="container mx-auto overflow-x-scroll  flex space-x-6 relative">
 //         {newArrivals.map((product) => (
@@ -45,4 +40,3 @@ export default UserLayout;
 //           </div>
 //         ))}
 //       </div>
-      

@@ -60,7 +60,7 @@ const placeholderProducts = [
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Hero/>
       <GenderCollectionSection/>
       <NewArrivals/>
@@ -73,7 +73,7 @@ const Home = () => {
       </div>
       <FeaturedCollection/>
       <FeaturesSection/>
-    </div>
+    </>
   )
 }
 
