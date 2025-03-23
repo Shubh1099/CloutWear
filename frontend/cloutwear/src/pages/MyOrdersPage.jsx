@@ -1,8 +1,11 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const MyOrdersPage = () => {
   const [orders, setOrders] = useState([]);
+  const navigate = useNavigate()
+
 
   useEffect(() => {
     setTimeout(() => {
@@ -53,6 +56,12 @@ const MyOrdersPage = () => {
     }, 1000);
   }, []);
 
+  const handleRowClick = (orderId) => {
+    console.log(`Order ID clicked: ${orderId}`);
+    // Navigate to order details page with the selected order ID
+    navigate(`/order/${orderId}`)
+  };
+
   return (
     <div className="max-w-7xl mx-auto p-4 sm:p-6">
       <h2 className="text-xl sm:text-2xl font-bold mb-6">My Orders</h2>
@@ -64,7 +73,7 @@ const MyOrdersPage = () => {
               <th className="py-2 px-4 sm:py-3">Order ID</th>
               <th className="py-2 px-4 sm:py-3">Created</th>
               <th className="py-2 px-4 sm:py-3">Shipping Address</th>
-              <th className="py-2 pxune 4 sm:py-3">Items</th>
+              <th className="py-2 px-4 sm:py-3">Items</th>
               <th className="py-2 px-4 sm:py-3">Price</th>
               <th className="py-2 px-4 sm:py-3">Status</th>
             </tr>
@@ -73,6 +82,9 @@ const MyOrdersPage = () => {
             {orders.length > 0 ? (
               orders.map((order) => (
                 <tr
+                  onClick={()=>{
+                    handleRowClick(order._id)
+                  }}
                   key={order._id}
                   className="hover:border-gray-50 cursor-pointer"
                 >

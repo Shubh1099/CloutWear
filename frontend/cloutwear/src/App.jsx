@@ -10,6 +10,10 @@ import Register from "./pages/Register";
 import Profile from "./pages/Profile";
 import CollectionPage from "./pages/CollectionPage";
 import ProductDetails from "./components/Products/ProductDetails";
+import CheckOut from "./components/Cart/CheckOut";
+import OrderConfirmation from "./pages/OrderConfirmation";
+import OrderDetails from "./pages/OrderDetailsPage";
+import MyOrdersPage from "./pages/MyOrdersPage";
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -30,6 +34,10 @@ function App() {
               element={<CollectionPage />}
             />
             <Route path="product/:id" element={<ProductDetails />} />
+            <Route path="checkout" element={<CheckOut />} />
+            <Route path="/order-confirmation" element={<OrderConfirmation />} />
+            <Route path="/order/:id" element={<OrderDetails />} />
+            <Route path="/myorders" element={<MyOrdersPage />} />
           </Route>
           <Route path="admin" element={<AdminLayout />}>
             {/* Admin Layout */}
