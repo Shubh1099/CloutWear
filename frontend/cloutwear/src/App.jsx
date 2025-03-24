@@ -50,7 +50,7 @@ function App() {
             <Route path="users" element={<UserManagament />} />
             <Route path="products" element={<ProductManagement />} />
             <Route path="products/:id/edit" element={<EditProductPage />} />
-            <Route path="orders" element={<OrderManagement/>} />
+            <Route path="orders" element={<OrderManagement />} />
           </Route>
         </Routes>
       </BrowserRouter>
