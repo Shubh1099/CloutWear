@@ -66,6 +66,9 @@ const NavBar = () => {
           </div>
         </div>
         <div className="flex items-center space-x-4 justify-end">
+          <Link to="/admin" className="block bg-black px-2 text-sm text-white">
+            Admin
+          </Link>
           <Link to="/profile" className="">
             <HiOutlineUser className="h-6 w-6 text-gray-700 hover:text-black" />
           </Link>
@@ -137,3 +140,4 @@ const NavBar = () => {
 };
 
 export default NavBar;
+

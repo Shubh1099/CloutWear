@@ -1,14 +1,12 @@
 import React from "react";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 
-
 const paypalid = import.meta.env.VITE_PAYPAL_CLIENT_ID;
-console.log(paypalid);
 
 const PaypalButton = ({ amount, onSuccess, onError }) => {
   const options = {
     currency: "USD",
-    "client-id": import.meta.env.VITE_PAYPAL_CLIENT_ID,
+    "client-id": paypalid,
     intent: "capture",
   };
 
