@@ -24,7 +24,7 @@ router.get("/my-orders", protect, async (req, res) => {
 
 // @route GET /api/orders/:id
 // @description get order details by id
-// @access
+// @access private
 
 router.get("/:id", protect, async (req, res) => {
   try {

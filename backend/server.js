@@ -7,6 +7,11 @@ const productRoutes = require("./routes/productRoutes");
 const cartRoutes = require("./routes/cartRoutes");
 const checkoutRoutes = require("./routes/checkoutRoutes");
 const orderRoutes = require(".//routes/orderRoutes");
+const uploadRoutes = require("./routes/uploadRoutes");
+const subscribeRoute = require("./routes/subscribeRoute");
+const adminRoutes = require("./routes/adminRoutes");
+const adminProductRoutes = require("./routes/adminProductRoutes");
+const adminOrders = require("./routes/adminOrderRoutes");
 
 // Middleware
 const app = express();
@@ -25,5 +30,10 @@ app.use("/api/products", productRoutes);
 app.use("/api/cart", cartRoutes);
 app.use("/api/checkout", checkoutRoutes);
 app.use("/api/orders", orderRoutes);
+app.use("/api/upload", uploadRoutes);
+app.use("/api", subscribeRoute);
+app.use("/api/admin", adminRoutes);
+app.use("/api/admin/products", adminProductRoutes);
+app.use("/api/admin/orders", adminOrders);
 
 app.listen(PORT, () => console.log(`Serever is running on  ${PORT}!`));

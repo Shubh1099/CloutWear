@@ -17,7 +17,7 @@ const getCart = async (userId, guestId) => {
 };
 
 // @route POST /api/cart
-// description add product into cart for a guest or loged in user
+// @description add product into cart for a guest or loged in user
 // @access public
 
 router.post("/", async (req, res) => {
