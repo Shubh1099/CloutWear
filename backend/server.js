@@ -1,31 +1,29 @@
-const express = require('express')
-const cors = require('cors')
-const dotenv = require('dotenv')
-const connectDB = require('./config/db')
-const userRoutes = require('./routes/userRoutes')
+const express = require("express");
+const cors = require("cors");
+const dotenv = require("dotenv");
+const connectDB = require("./config/db");
+const userRoutes = require("./routes/userRoutes");
 const productRoutes = require("./routes/productRoutes");
-const cartRoutes = require('./routes/cartRoutes')
+const cartRoutes = require("./routes/cartRoutes");
+const checkoutRoutes = require("./routes/checkoutRoutes");
+const orderRoutes = require(".//routes/orderRoutes");
 
 // Middleware
-const app = express()
-app.use(express.json())
-app.use(cors())
+const app = express();
+app.use(express.json());
+app.use(cors());
 
 dotenv.config();
 
-
-const PORT = process.env.PORT ||'9000'
+const PORT = process.env.PORT || "9000";
 
 // Connect to MongoDB
-connectDB()
+connectDB();
 
-
-
-
-app.use("/api/users", userRoutes)
+app.use("/api/users", userRoutes);
 app.use("/api/products", productRoutes);
-app.use("/api/cart",cartRoutes)
+app.use("/api/cart", cartRoutes);
+app.use("/api/checkout", checkoutRoutes);
+app.use("/api/orders", orderRoutes);
 
-
-
-app.listen(PORT, () => console.log(`Serever is running on  ${PORT}!`))
+app.listen(PORT, () => console.log(`Serever is running on  ${PORT}!`));
