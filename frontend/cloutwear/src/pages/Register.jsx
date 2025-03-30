@@ -1,21 +1,22 @@
 import React from "react";
 import { useState } from "react";
+import {useDispatch} from "react-redux"
 import { Link } from "react-router-dom";
 import register from "../assets/register.webp";
+import {registerUser} from "../redux/slices/authSlice"
+
 
 const Register = () => {
-    const [name, setName] = useState("")
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const dispatch = useDispatch();
   
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // TODO: Implement registration logic
-    console.log("Registration successful",{name,email,password});
-    
+   dispatch(registerUser({name,email,password}))
   };
-
-  
 
   return (
     <div className="flex ">
@@ -31,7 +32,7 @@ const Register = () => {
           <h2 className="text-xl font-bold text-center mb-6">Hey there! 👋</h2>
           <p className="text-center mb-6">Enter your username and password</p>
           <div className="mb-4">
-            <label className="block text-sm font-semibold mb-2">Email</label>
+            <label className="block text-sm font-semibold mb-2">Name</label>
             <input
               type="text"
               onChange={(e) => setName(e.target.value)}
