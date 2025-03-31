@@ -89,7 +89,7 @@ npm run dev
 ### Run Frontend
 ```bash
 cd frontend/cloutwear
-npm start
+npm run dev
 ```
 
 ---
